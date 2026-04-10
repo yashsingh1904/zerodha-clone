@@ -20,7 +20,7 @@ const Home = () => {
     // Now check if token exists
     const token = localStorage.getItem("token");
     if (!token) {
-      window.location.href = "http://localhost:3001/login";
+      window.location.href = "https://zerodha-clone-qri3.vercel.app/login";
     }
   }, []);
 

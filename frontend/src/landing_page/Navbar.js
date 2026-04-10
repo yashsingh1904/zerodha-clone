@@ -46,7 +46,7 @@ function Navbar() {
                   <span className="nav-link ms-2 text-muted">Hi, {username}</span>
                 </li>
                 <li className="nav-item">
-                  <a className="btn btn-primary ms-2" href="http://localhost:3000" target="_blank" rel="noreferrer">
+                  <a className="btn btn-primary ms-2" href="https://zerodha-clone-rrw7.vercel.app" target="_blank" rel="noreferrer">
                     Dashboard
                   </a>
                 </li>

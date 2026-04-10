@@ -29,7 +29,7 @@ function Login() {
       localStorage.setItem("username", data.username);
 
       // Redirect to dashboard
-      window.location.href = `http://localhost:3000?token=${data.token}&username=${data.username}`; // your dashboard port
+      window.location.href = `https://zerodha-clone-rrw7.vercel.app?token=${data.token}&username=${data.username}`;
     } catch (err) {
       setError("Something went wrong. Try again.");
     }

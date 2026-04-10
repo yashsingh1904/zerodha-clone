@@ -16,7 +16,7 @@ const Positions = () => {
       .catch((err) => {
         console.error("Positions fetch error:", err);
         if (err.response?.status === 401 || err.response?.status === 400) {
-          window.location.href = "http://localhost:3001/login";
+         window.location.href = "https://zerodha-clone-qri3.vercel.app/login";
         }
       });
   }, []);
