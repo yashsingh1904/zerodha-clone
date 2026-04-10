@@ -18,7 +18,9 @@ const url = process.env.MONGO_URL;
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"],
+  origin: function(origin, callback) {
+    callback(null, true); // Allow all origins
+  },
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
