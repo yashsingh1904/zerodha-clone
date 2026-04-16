@@ -1,91 +1,68 @@
 import React from 'react'
 
 function Team() {
-    return (
-        <>
+  return (
+    <div className='container px-3 px-md-5 py-4 py-md-5 text-center'>
 
-            <div className='container p-5 text-center '>
+      <h2 className='mb-4'>People</h2>
 
-                <h2>People</h2>
+      {/* Featured member — Nithin */}
+      <div className='row align-items-center g-4 mb-4'>
 
-                <div className='row align-items-center '>
+        <div className='col-12 col-md-4 text-center'>
+          <img
+            className='rounded-circle img-fluid'
+            src='media/images/nithinKamath.jpg'
+            alt='Nithin Kamath'
+            style={{ maxWidth: '200px', width: '70%' }}
+          />
+          <h4 className='mt-4'>Nithin Kamath</h4>
+          <p className='text-muted'>Founder, CEO</p>
+        </div>
 
-                    <div className='col p-5 text-center '>
+        <div className='col-12 col-md-8 text-center text-md-start px-3 px-md-5'>
+          <h6 className='mt-2' style={{ lineHeight: '1.8' }}>
+            Nithin bootstrapped and founded Zerodha in 2010 to overcome the hurdles he faced
+            during his decade long stint as a trader. Today, Zerodha has changed the landscape
+            of the Indian broking industry.
+          </h6>
+          <h6 className='mt-4' style={{ lineHeight: '1.8' }}>
+            He is a member of the SEBI Secondary Market Advisory Committee (SMAC) and the
+            Market Data Advisory Committee (MDAC).
+          </h6>
+        </div>
 
-                        <img className='rounded-circle  item-center' src='media/images/nithinKamath.jpg' />
-                        <h4 className='mt-4'> Nithin Kamarth</h4>
-                        <p className='mt-3 text-muted'>Founder, CEO</p>
-                    </div>
+      </div>
 
-                    <div className='col text-center p-5'>
+      <hr className='my-4' />
 
-                        <h6 className='mt-4'>Nithin bootstrapped and founded Zerodha in 2010 to overcome the hurdles he faced during his decade long stint as a trader.Today, Zerodha has changed the landscape of the Indian broking industry.</h6>
+      {/* Rest of the team — 2 per row on mobile, 3 per row on desktop */}
+      <div className='row g-4 py-3 mt-2'>
 
-                        <h6 className='mt-4'>He is a member of the SEBI Secondary Market Advisory Committee (SMAC) and the Market Data Advisory Committee (MDAC)</h6>
+        {[
+          { src: 'media/images/Nikhil.jpg',   name: 'Nikhil Kamath',      role: 'Co-Founder, CFO'     },
+          { src: 'media/images/Kailash.jpg',  name: 'Dr. Kailash Nadh',   role: 'CTO'                 },
+          { src: 'media/images/Venu.jpg',     name: 'Venu Madhav',        role: 'COO'                 },
+          { src: 'media/images/Seema.jpg',    name: 'Seema Patil',        role: 'Director'            },
+          { src: 'media/images/Karthik.jpg',  name: 'Karthik Rangappa',   role: 'Chief of Education'  },
+          { src: 'media/images/Austin.jpg',   name: 'Austin Prakash',     role: 'Director Strategy'   },
+        ].map((person) => (
+          <div key={person.name} className='col-6 col-md-4 text-center'>
+            <img
+              className='rounded-circle img-fluid'
+              src={person.src}
+              alt={person.name}
+              style={{ maxWidth: '160px', width: '70%' }}
+            />
+            <h5 className='mt-4'>{person.name}</h5>
+            <p className='text-muted small'>{person.role}</p>
+          </div>
+        ))}
 
+      </div>
 
-
-                    </div>
-
-                </div>
-
-                <div className='row p-3 '>
-
-                     <div className='col p-2 text-center '>
-
-                        <img className='rounded-circle  item-center' src='media/images/Nikhil.jpg'  style={{width:"70%"}} />
-                        <h4 className='mt-4'> Nikhil Kamanth</h4>
-                        <p className='mt-3 text-muted'> Co-Founder, CFO</p>
-                    </div>
-
-                     <div className='col p-2 text-center '>
-
-                        <img className='rounded-circle  item-center' src='media/images/Kailash.jpg' style={{width:"70%"}} />
-                        <h4 className='mt-4'> Dr. Kailash Nadh</h4>
-                        <p className='mt-3 text-muted'>CTO</p>
-                    </div>
-
-                     <div className='col p-2 text-center '>
-
-                        <img className='rounded-circle  item-center' src='media/images/Venu.jpg' style={{width:"70%"}}/>
-                        <h4 className='mt-4'> Venu Madhav</h4>
-                        <p className='mt-3 text-muted'>COO</p>
-                    </div>
-
-                </div>
-
-
-
-                 <div className='row mt-5 p-5'>
-
-                     <div className='col p-2 text-center '>
-
-                        <img className='rounded-circle  item-center' src='media/images/Seema.jpg'  style={{width:"70%"}} />
-                        <h4 className='mt-4'> Seema Patil</h4>
-                        <p className='mt-3 text-muted'>Director</p>
-                    </div>
-
-                     <div className='col p-2 text-center '>
-
-                        <img className='rounded-circle  item-center' src='media/images/Karthik.jpg' style={{width:"70%"}} />
-                        <h4 className='mt-4'> Karthik Rangappa</h4>
-                        <p className='mt-3 text-muted'>Cheif of Education</p>
-                    </div>
-
-                     <div className='col p-2 text-center '>
-
-                        <img className='rounded-circle  item-center' src='media/images/Austin.jpg' style={{width:"70%"}}/>
-                        <h4 className='mt-4'> Austin Prakesh</h4>
-                        <p className='mt-3 text-muted'>Director Strategy</p>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </>
-    )
+    </div>
+  )
 }
 
 export default Team
